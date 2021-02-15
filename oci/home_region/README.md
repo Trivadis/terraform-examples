@@ -33,6 +33,6 @@ terraform apply home_region.tfplan
 
 tbd
 
-## Tips and Troubleshooting
+## Tips and Troubleshooting
 
 tbd
