@@ -12,10 +12,20 @@ This repository provides sample/example terraform configurations and modules for
 - See also specific requirements for the different providers.
 
 ## Issues
-Please file your bug reports, enhancement requests, questions and other support requests within [Github's issue tracker](https://help.github.com/articles/about-issues/):
 
-* [Existing issues](https://github.com/Trivadis/terraform-examples/issues)
-* [submit new issue](https://github.com/Trivadis/terraform-examples/issues/new)
+Please file your bug reports, enhancement requests, questions and other support requests within [Github's issue tracker](https://help.github.com/articles/about-issues/).
+
+- [Questions](https://github.com/Trivadis/terraform-examples/issues?q=is%3Aissue+label%3Aquestion)
+- [Open enhancements](https://github.com/Trivadis/terraform-examples/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement)
+- [Open bugs](https://github.com/Trivadis/terraform-examples/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+- [Submit new issue](https://github.com/Trivadis/terraform-examples/issues/new)
+
+## How to Contribute
+
+1. Describe your idea by [submitting an issue](https://github.com/Trivadis/terraform-examples/issues/new)
+2. [Fork this respository](https://github.com/Trivadis/terraform-examples/fork)
+3. [Create a branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/), commit and publish your changes and enhancements
+4. [Create a pull request](https://help.github.com/articles/creating-a-pull-request/)
 
 ## License
 
