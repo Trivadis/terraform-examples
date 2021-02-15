@@ -1,6 +1,6 @@
 # Terraform Provider for Amazon Web Services
 
-This folder provides sample/example terraform configurations and modules for Amazon Web Services.
+This directory contains Terraform configuration files showing how to create specific resources. The examples are intended to be as simple as possible, in most cases containing only the specific resource and any dependencies required for it to run. These do not represent production configurations or real world scenarios.
 
 ## Requirements
 
