@@ -16,13 +16,13 @@
 # This data source provides details about a specific Tenancy resource in 
 # Oracle Cloud Infrastructure Identity service. see 
 # https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_tenancy
-data oci_identity_tenancy tenancy {
+data "oci_identity_tenancy" "tenancy" {
   tenancy_id = var.tenancy_ocid
 }
 
 # This data source provides the list of Regions in Oracle Cloud Infrastructure Identity service.
 # see https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_regions
-data oci_identity_regions regions {
+data "oci_identity_regions" "regions" {
 }
 
 locals {
@@ -33,18 +33,18 @@ locals {
   }
   # get home region for home_region_key
   home_region = lookup(
-    local.region_map, 
+    local.region_map,
     data.oci_identity_tenancy.tenancy.home_region_key
   )
 }
 
 # display home region
-output home_region {
+output "home_region" {
   value = local.home_region
 }
 
 # display region
-output region {
+output "region" {
   value = var.region
 }
 # --- EOF -------------------------------------------------------------------
