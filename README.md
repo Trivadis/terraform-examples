@@ -1,5 +1,8 @@
 # Trivadis Terraform Examples
 
+
+![terraform-lint](https://github.com/Trivadis/terraform-examples/workflows/terraform-lint/badge.svg)
+
 This repository provides sample/example terraform configurations and modules for Cloud Infrastructure and Cloud Platform Services, intended for use with the following Terraform Providers:
 
 - Terraform Provider for Oracle Cloud Infrastructure [oci](oci)
