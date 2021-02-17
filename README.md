@@ -9,7 +9,7 @@ This repository provides sample/example terraform configurations and modules for
 - Terraform Provider for Amazon Web Services [aws](aws)
 - Terraform Provider for Microsoft Azure [azure](azure)
 
-## Requirements
+## Requirements
 
 - [Terraform](https://www.terraform.io/downloads.html) v0.13.1 or greater
 - See also specific requirements for the different providers.
