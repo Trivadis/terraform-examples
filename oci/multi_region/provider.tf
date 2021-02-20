@@ -26,11 +26,11 @@ provider "oci" {
 # provider for home region for IAM resource provisioning
 # see https://medium.com/oracledevs/provision-oracle-cloud-infrastructure-home-region-iam-resources-in-a-multi-region-terraform-f997a00ae7ed
 provider "oci" {
-  alias             = "home"
-  tenancy_ocid      = var.tenancy_ocid
-  user_ocid         = var.user_ocid
-  fingerprint       = var.fingerprint
-  private_key_path  = var.private_key_path
-  region            = local.home_region
+  alias            = "home"
+  tenancy_ocid     = var.tenancy_ocid
+  user_ocid        = var.user_ocid
+  fingerprint      = var.fingerprint
+  private_key_path = var.private_key_path
+  region           = local.home_region
 }
 # --- EOF -------------------------------------------------------------------

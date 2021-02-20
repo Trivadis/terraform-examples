@@ -21,6 +21,6 @@
 # user_ocid                   = ""
 
 # provider identity parameters ------------------------------------------------
-region                      = "us-ashburn-1"
+region = "us-ashburn-1"
 
 # --- EOF -------------------------------------------------------------------

@@ -14,12 +14,12 @@
 #              at http://www.apache.org/licenses/
 # ---------------------------------------------------------------------------
 # create the compartment in the Home region
-resource oci_identity_compartment compartment {
-    provider        = oci.home
-    name            = var.resource_name
-    description     = "Example compartment ${var.resource_name} created by terraform"
-    compartment_id  = var.tenancy_ocid
-    # true will cause this compartment to be deleted when running `terrafrom destroy`
-    enable_delete   = true
+resource "oci_identity_compartment" "compartment" {
+  provider       = oci.home
+  name           = var.resource_name
+  description    = "Example compartment ${var.resource_name} created by terraform"
+  compartment_id = var.tenancy_ocid
+  # true will cause this compartment to be deleted when running `terrafrom destroy`
+  enable_delete = true
 }
 # --- EOF -------------------------------------------------------------------
