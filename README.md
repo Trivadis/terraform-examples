@@ -1,12 +1,15 @@
 # Trivadis Terraform Examples
 
+
+![terraform-lint](https://github.com/Trivadis/terraform-examples/workflows/terraform-lint/badge.svg)
+
 This repository provides sample/example terraform configurations and modules for Cloud Infrastructure and Cloud Platform Services, intended for use with the following Terraform Providers:
 
 - Terraform Provider for Oracle Cloud Infrastructure [oci](oci)
 - Terraform Provider for Amazon Web Services [aws](aws)
 - Terraform Provider for Microsoft Azure [azure](azure)
 
-## Requirements
+## Requirements
 
 - [Terraform](https://www.terraform.io/downloads.html) v0.13.1 or greater
 - See also specific requirements for the different providers.
