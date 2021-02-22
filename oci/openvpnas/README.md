@@ -72,10 +72,12 @@ $ terraform apply openvpn.tfplan
 ```
 
 # OpenVPN URL
-The public IP address is part of the Terraform output. To get the OVPN client configuration file:
+
+## Client Configuration
+The public IP address is part of the Terraform output. To get the OVPN client configuration file or an OpenVPN GUI:
  * https://<your_openvpnas_public_ip_here>/?=connect
 
- Admin console
+## Admin Console
  * https://<your_openvpnas_public_ip_here>/admin
 
 

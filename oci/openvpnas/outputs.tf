@@ -5,7 +5,7 @@
 # Name.......: outputs.tf
 # Author.....: Martin Berger (mbg) martin.berger@trivadis.com
 # Editor.....: Martin Berger
-# Date.......: 2021.02.11
+# Date.......: 2021.02.22
 # Revision...: 
 # Purpose....: Output definition for this terraform configuration.
 # Notes......: --
