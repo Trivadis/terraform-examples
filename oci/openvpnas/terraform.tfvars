@@ -17,22 +17,22 @@
 # required ------------------------------------------------------------------
 
 # provider identity variables 
-tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaaxuk4je4t3aorovuzmwyeaq5sftqv3nkyz64snijtdkitadbqqxmq"
-user_ocid = "ocid1.user.oc1..aaaaaaaadlv5vwm3zfdnyanosmdjm7cyjzdhmgawregvm6de7wznb3fjqtxq"
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaaxuk4je4t3aorovuzmwyeaq5sftqv3nkyz64snijtdkitadbqqxmq"
+user_ocid        = "ocid1.user.oc1..aaaaaaaadlv5vwm3zfdnyanosmdjm7cyjzdhmgawregvm6de7wznb3fjqtxq"
 private_key_path = "/home/oci/.oci/oci_api_key.pem"
-fingerprint = "6a:ce:8e:a7:4a:a1:70:ad:4e:d7:e6:8f:d6:97:55:60"
-region = "eu-zurich-1"
+fingerprint      = "6a:ce:8e:a7:4a:a1:70:ad:4e:d7:e6:8f:d6:97:55:60"
+region           = "eu-zurich-1"
 
 # general oci variables 
-compartment_name="OCI_OpenVPN_Access"
-compartment_description="OCI OpenVPN Access Server Setup"
-compartment_master_ocid="ocid1.compartment.oc1..aaaaaaaat5uo2xh77edws4huwvqorengp7x4xdv6x3giw3vryk36vyydwsdq"
+compartment_name        = "OCI_OpenVPN_Access"
+compartment_description = "OCI OpenVPN Access Server Setup"
+compartment_master_ocid = "ocid1.compartment.oc1..aaaaaaaat5uo2xh77edws4huwvqorengp7x4xdv6x3giw3vryk36vyydwsdq"
 
 # compute instance variables 
-compute_ssh_authorized_keys="./ssh/terraform_deployments_example.pub"
+compute_ssh_authorized_keys = "./ssh/terraform_deployments_example.pub"
 
 # openvpnas instance variables 
-openvpn_admin_password="4703@Kestenholz"
+openvpn_admin_password = "4703@Kestenholz"
 
 
 # set as per default in variables.tf--------------------------------------------

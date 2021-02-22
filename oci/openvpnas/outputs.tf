@@ -44,7 +44,7 @@ output "private-ip-for-compute-instance" {
 # vcn_ocid
 output "vcn_id" {
   description = "OCID of the VCN that is created"
-  value = module.vcn.vcn_id
+  value       = module.vcn.vcn_id
 }
 
 # private security list
