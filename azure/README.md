@@ -2,7 +2,7 @@
 
 This directory contains Terraform configuration files showing how to create specific resources. The examples are intended to be as simple as possible, in most cases containing only the specific resource and any dependencies required for it to run. These do not represent production configurations or real world scenarios.
 
-## Requirements
+## Requirements
 
 - [Terraform](https://www.terraform.io/downloads.html) v0.13.1 or greater
 - Terraform azurerm provider v2.47.0 or greater see [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
