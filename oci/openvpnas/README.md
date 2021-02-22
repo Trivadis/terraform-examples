@@ -15,7 +15,7 @@ This example contains a Terraform configuration to a public/private subnet setup
   * Oracle OCI CLI installed and configured 
   * Terraform up and running
   * Git client installed
-  * SSH public key for OCI instance setup available
+  * SSH public key for private OCI compute instance - please replace the public SSH code in subdirectory ssh with your own to get access to the compute instance
 
 
 # Variables in terraform.tfvars file
