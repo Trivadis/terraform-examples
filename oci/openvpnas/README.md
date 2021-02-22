@@ -1,7 +1,7 @@
 # OpenVPN Setup with Terraform
 This example contains a Terraform configuration to a public/private subnet setup and an OpenVPN server up and running. Part of the OpenVPN provisioning code is reverse engineered from the Oracle Cloud Infrastructure OCI Resource Manager stack.
 
-![OCI Architecture Picture](image/oci_small_dev_architecture.jpg)  
+![OCI Architecture Picture](image/oci_small_dev_architecture_20210222.jpg)  
 
 # What this example covers
  * A new compartment is created based on an existing compartment
