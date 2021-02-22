@@ -1,20 +1,3 @@
-# ---------------------------------------------------------------------------
-# Trivadis AG, Infrastructure Managed Services
-# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
-# ---------------------------------------------------------------------------
-# Name.......: bootstrap.pl
-# Author.....: Martin Berger (mbg) martin.berger@trivadis.com
-# Editor.....: Martin Berger
-# Date.......: 2021.02.22
-# Revision...: 
-# Purpose....: Bootstrap file to setup OpenVPN Access Server.
-# Notes......: --
-# Reference..: https://openvpn.net/vpn-server-resources/command-line/
-# License....: Apache License Version 2.0, January 2004 as shown
-#              at http://www.apache.org/licenses/
-# ---------------------------------------------------------------------------
-
-
 #!/bin/bash
 # find public ip addr
 sudo su
