@@ -81,15 +81,14 @@ Admin console
 
 ## OpenVPN Login and Download the OVPN Client or Profile
 
-Login with username _openvpnadmin_ and the provided password.
-
-![OCI OpenVPN Login](image/oci_small_dev_architecture.jpg)  
-
-Download client or user-locked profile.
+Login with username _openvpnadmin_ and the provided password. 
 
 ![OCI OpenVPN Download Client or Profile](image/tf_openvpn_01.png)  
 
-Login into compute instance when OpenVPN tunnel is running with the provieded SSH key. User is _opc_.
+Download client or user-locked profile.
 
 ![Putty SSH Login Screen](image/tf_openvpn_02.png)  
 
+Login into compute instance when OpenVPN tunnel is running with the provieded SSH key. User is _opc_.
+
+![Putty SSH Login Screen](image/tf_openvpn_03.png)  
