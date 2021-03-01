@@ -2,6 +2,6 @@
 **/*terraform.tfstate*
 **/*.terraform/
 **/*.tfplan
+.vscode
+.code-workspace
 oci/opnvpnas/*tfvars
-oci/opnvpnas/.vscode
-oci/opnvpnas/*.code-workspace
