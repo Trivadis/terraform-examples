@@ -3,5 +3,5 @@
 **/*.terraform/
 **/*.tfplan
 oci/opnvpnas/*tfvars
-oci/opnvpnas/.vscode/*
+oci/opnvpnas/.vscode
 oci/opnvpnas/*.code-workspace
