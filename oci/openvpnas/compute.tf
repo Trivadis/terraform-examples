@@ -35,7 +35,7 @@ resource "oci_core_instance" "compute_instance" {
     subnet_id        = oci_core_subnet.vcn-private-subnet.id
   }
   metadata = {
-    ssh_authorized_keys = file(var.compute_ssh_authorized_keys)
+    ssh_authorized_keys = var.ssh_public_key
   }
   preserve_boot_volume = false
 
@@ -125,7 +125,7 @@ resource "oci_core_instance" "as_instance" {
   }
 
   metadata = {
-    ssh_authorized_keys = file(var.compute_ssh_authorized_keys)
+    ssh_authorized_keys = var.ssh_public_key
     user_data           = base64encode(data.template_file.bootstrap.rendered)
   }
   timeouts {

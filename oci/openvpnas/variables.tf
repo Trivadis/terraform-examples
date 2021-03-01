@@ -82,9 +82,8 @@ variable "compute_display_name" {
   type        = string
 }
 
-variable "compute_ssh_authorized_keys" {
-  description = "path to the ssh public key file"
-  default     = ""
+variable "ssh_public_key" {
+	default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbytm9y7UigHeV2L0vUXWqFiplf9ntG9VMUBGwEoWATV6Ir/4udvObm/6dFCltVmvHVWD5XdbXWvyz9is69jH3Cb2hOUtyZMeXJBTtXnMuC0HaN7zHmrV6qfkQDiRpJNHCEpD3LhAL2VG7tViqCC9rSTEfezKibjGXVl1R606xp57oduuT1V4g82+BLYKdEsDAfgVLI8z23dSYyzd3Kb6ikqG+9wSA1KWWb051KE8ofRtL+FD5cZ/uGLwhczIbMaEZjHs5Zv5L9kWKUU4nBIxv4RN2QjbpFQ+EoTVVZqPeT1eILKEuOFPy5s42AA1an4FMdSoLmEuRtC0sIoR5L5kj imported-openssh-key"
   type        = string
 }
 
