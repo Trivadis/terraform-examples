@@ -5,3 +5,4 @@
 .vscode
 .code-workspace
 oci/opnvpnas/*tfvars
+**/*.DS_Store
