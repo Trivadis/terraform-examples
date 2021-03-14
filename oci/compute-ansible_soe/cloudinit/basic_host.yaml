@@ -1,0 +1,66 @@
+#cloud-config
+# ----------------------------------------------------------------------------
+# Trivadis AG, Infrastructure Managed Services
+# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
+# ----------------------------------------------------------------------------
+# Name.......: bastion_host.yaml 
+# Author.....: Stefan Oehrli (oes) stefan.oehrli@trivadis.com
+# Editor.....: Stefan Oehrli
+# Date.......: 2020.11.23
+# Revision...: 
+# Purpose....: cloud-init configuration file for bastion hosts
+# Notes......: --
+# Reference..: --
+# ----------------------------------------------------------------------------
+# --- Install/upgrade yum packages -------------------------------------------
+package_upgrade: true # Enable yum update
+packages:             # install additional packages
+  - git               # Fast Version Control System
+  - ansible           # SSH-based configuration management, deployment,
+                      # and task execution system
+  - pwgen             # Automatic password generation
+  - python            # An interpreted, interactive, object-oriented
+                      # programming language
+# --- EOF Install/upgrade yum packages ---------------------------------------
+
+# --- Create users -----------------------------------------------------------
+users:
+  - default
+  - name: ansible
+    gecos: Ansible OS User
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    shell: /bin/bash
+    lock_passwd: true
+# --- EOF Create users -------------------------------------------------------
+
+# --- Update remote files ----------------------------------------------------
+write_files:
+# Add ansible private key -------------------------------------------
+  - path: "/home/ansible/files/bootstrap_playbook.yml"
+    permissions: "0644"
+    encoding: "gzip+base64"
+    content: |
+      ${ansible_playbook}
+    
+  # Add ansible SSH authorized keys ------------------------------------------
+  - path: "/home/ansible/.ssh/authorized_keys"
+    permissions: "0600"
+    encoding: "gzip+base64"
+    content: |
+      ${authorized_keys}
+# --- EOF Update remote files ------------------------------------------------
+
+# --- Run configuration commands ---------------------------------------------
+runcmd:
+# Update motd message
+  - echo "This instance was provisioned by Terraform." > /etc/motd
+
+# Change owner of ansible files
+  - chown -R ansible /home/ansible/files
+  - chown -R ansible /home/ansible/.ssh
+
+# Bootstrap system using ansible bootstrap playbook
+  - cd /home/ansible/files
+  - ansible-playbook -c local -i "localhost," bootstrap_playbook.yml
+# --- EOF Run configuration commands -----------------------------------------
+# --- EOF --------------------------------------------------------------------
