@@ -70,8 +70,8 @@ $ terraform apply compute-ansible.tfplan
 ```
 
 # SSH Access
-The public SSH key for the compute instance is provided in file _variables.tf_ or by your environment settings. The example private key to get access to the compute instance is available in subdirectory ssh. PLease change the keys.
+The public SSH key for the compute instance is provided in file _variables.tf_ or by your environment settings. The example private key to get access to the compute instance is available in subdirectory ssh. Please change the keys.
 
 # Apache 2 URL
-The public IP address is part of the Terraform output. To get the OVPN client configuration file:
+The public IP address is part of the Terraform output variable _public-ip-for-compute-instance_.
 * http://public-ip-for-compute-instance
