@@ -92,23 +92,23 @@ variable "ssh_opc_public_key" {
 
 variable "ssh_opc_private_key_file" {
   type    = string
-  default = "./ssh/terraform_deployments.pem"
+  default = "./ssh/terraform_deployments_opc.pem"
 }
 
 variable "ssh_opc_public_key_file" {
   type    = string
-  default = "./ssh/terraform_deployments.pub"
+  default = "./ssh/terraform_deployments_opc.pub"
 }
 
 # ssh for user ansible
 variable "ssh_ansible_private_key_file" {
   type    = string
-  default = "./ssh/terraform_deployments.pem"
+  default = "./ssh/terraform_deployments_ansible.pem"
 }
 
 variable "ssh_ansible_public_key_file" {
   type    = string
-  default = "./ssh/terraform_deployments.pub"
+  default = "./ssh/terraform_deployments_ansible.pub"
 }
 
 

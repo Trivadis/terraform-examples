@@ -30,7 +30,8 @@ Required variables according your Oracle Cloud Infrastructure environment.
 | TF_VAR_compartment_description        | OCI Compartment Description                |
 | TF_VAR_compartment_master_ocid        | OCI Master Compartment OCID                |
 
-Note: In this example, in _variables.tf_ example keys from subdirectory ssh are used.
+  * Note 1: In this example, in _variables.tf_ example keys from subdirectory ssh are used.
+  * Note 2: The new created compartent still exists after _terraform destroy_ command - you change the behavior in _main.tf_ line 23.
 
 
 ## Example to export specific variables:
