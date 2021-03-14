@@ -41,7 +41,7 @@ resource "oci_core_instance" "compute_instance" {
   preserve_boot_volume = false
 
 
-# Create connect to preprare SSH setup for user ansible
+  # Create connect to preprare SSH setup for user ansible
   provisioner "file" {
     source      = var.ssh_ansible_public_key_file
     destination = "/tmp/authorized_keys"
@@ -54,28 +54,28 @@ resource "oci_core_instance" "compute_instance" {
     }
   }
 
-# Add OS user ansible and add to sudo group, prepare directories and permissions
+  # Add OS user ansible and add to sudo group, prepare directories and permissions
   provisioner "remote-exec" {
     inline = [
-    # Setup sudo to allow no-password sudo for "ansible" user
-    # From: https://learn.hashicorp.com/tutorials/terraform/packer
+      # Setup sudo to allow no-password sudo for "ansible" user
+      # From: https://learn.hashicorp.com/tutorials/terraform/packer
       "sudo echo 'This instance was provisioned by Terraform.' | sudo tee /etc/motd",
       "sudo yum -y install ansible git python",
       "sudo groupadd -r ansible",
       "sudo useradd -m -s /bin/bash -g ansible ansible",
       "sudo echo 'ansible ALL=(ALL) NOPASSWD: ALL' | sudo EDITOR='tee -a' visudo",
 
-    # Installing SSH key
-    "sudo mkdir -p /home/ansible/.ssh",
-    "sudo chmod 700 /home/ansible/.ssh",
-    "sudo mkdir -p /home/ansible/files",
-    "sudo chmod 700 /home/ansible/files",
-    "sudo cp /tmp/authorized_keys /home/ansible/.ssh/authorized_keys",
-    "sudo chmod 600 /home/ansible/.ssh/authorized_keys",
-    "sudo chown -R ansible /home/ansible/.ssh",
-    "sudo chown -R ansible /home/ansible/files",
-    "sudo rm /tmp/authorized_keys",
-   ]
+      # Installing SSH key
+      "sudo mkdir -p /home/ansible/.ssh",
+      "sudo chmod 700 /home/ansible/.ssh",
+      "sudo mkdir -p /home/ansible/files",
+      "sudo chmod 700 /home/ansible/files",
+      "sudo cp /tmp/authorized_keys /home/ansible/.ssh/authorized_keys",
+      "sudo chmod 600 /home/ansible/.ssh/authorized_keys",
+      "sudo chown -R ansible /home/ansible/.ssh",
+      "sudo chown -R ansible /home/ansible/files",
+      "sudo rm /tmp/authorized_keys",
+    ]
 
     connection {
       type        = "ssh"
@@ -86,7 +86,7 @@ resource "oci_core_instance" "compute_instance" {
   }
 
 
-# Transfer apache install file    
+  # Transfer apache install file    
   provisioner "file" {
     source      = "./ansible/apache-install.yml"
     destination = "/home/ansible/files/apache-install.yml"
@@ -99,11 +99,11 @@ resource "oci_core_instance" "compute_instance" {
     }
   }
 
-# Execute Ansible playbook
-provisioner "remote-exec" {
+  # Execute Ansible playbook
+  provisioner "remote-exec" {
     inline = [
-        "cd files; ansible-playbook -c local -i \"localhost,\" apache-install.yml",
-   ]
+      "cd files; ansible-playbook -c local -i \"localhost,\" apache-install.yml",
+    ]
 
     connection {
       type        = "ssh"

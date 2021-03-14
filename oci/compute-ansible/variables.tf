@@ -86,29 +86,29 @@ variable "compute_display_name" {
 
 # ssh for user opc
 variable "ssh_opc_public_key" {
-	default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbytm9y7UigHeV2L0vUXWqFiplf9ntG9VMUBGwEoWATV6Ir/4udvObm/6dFCltVmvHVWD5XdbXWvyz9is69jH3Cb2hOUtyZMeXJBTtXnMuC0HaN7zHmrV6qfkQDiRpJNHCEpD3LhAL2VG7tViqCC9rSTEfezKibjGXVl1R606xp57oduuT1V4g82+BLYKdEsDAfgVLI8z23dSYyzd3Kb6ikqG+9wSA1KWWb051KE8ofRtL+FD5cZ/uGLwhczIbMaEZjHs5Zv5L9kWKUU4nBIxv4RN2QjbpFQ+EoTVVZqPeT1eILKEuOFPy5s42AA1an4FMdSoLmEuRtC0sIoR5L5kj imported-openssh-key"
-  type        = string
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbytm9y7UigHeV2L0vUXWqFiplf9ntG9VMUBGwEoWATV6Ir/4udvObm/6dFCltVmvHVWD5XdbXWvyz9is69jH3Cb2hOUtyZMeXJBTtXnMuC0HaN7zHmrV6qfkQDiRpJNHCEpD3LhAL2VG7tViqCC9rSTEfezKibjGXVl1R606xp57oduuT1V4g82+BLYKdEsDAfgVLI8z23dSYyzd3Kb6ikqG+9wSA1KWWb051KE8ofRtL+FD5cZ/uGLwhczIbMaEZjHs5Zv5L9kWKUU4nBIxv4RN2QjbpFQ+EoTVVZqPeT1eILKEuOFPy5s42AA1an4FMdSoLmEuRtC0sIoR5L5kj imported-openssh-key"
+  type    = string
 }
 
 variable "ssh_opc_private_key_file" {
-  type        = string
-  default    = "./ssh/terraform_deployments.pem"
+  type    = string
+  default = "./ssh/terraform_deployments.pem"
 }
 
 variable "ssh_opc_public_key_file" {
-  type        = string
-  default    = "./ssh/terraform_deployments.pub"
+  type    = string
+  default = "./ssh/terraform_deployments.pub"
 }
 
 # ssh for user ansible
 variable "ssh_ansible_private_key_file" {
-  type        = string
-  default    = "./ssh/terraform_deployments.pem"
+  type    = string
+  default = "./ssh/terraform_deployments.pem"
 }
 
 variable "ssh_ansible_public_key_file" {
-  type        = string
-  default    = "./ssh/terraform_deployments.pub"
+  type    = string
+  default = "./ssh/terraform_deployments.pub"
 }
 
 
