@@ -1,0 +1,28 @@
+#cloud-config
+# ----------------------------------------------------------------------------
+# Trivadis AG, Infrastructure Managed Services
+# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
+# ----------------------------------------------------------------------------
+# Name.......: windows_host.yaml 
+# Author.....: Stefan Oehrli (oes) stefan.oehrli@trivadis.com
+# Editor.....: Stefan Oehrli
+# Date.......: 2020.12.02
+# Revision...: 
+# Purpose....: cloud-init configuration file for windows hosts
+# Notes......: --
+# Reference..: --
+# ----------------------------------------------------------------------------
+
+# --- Update remote files ----------------------------------------------------
+write_files:
+  - path: C:/Users/Administrator/bootstrap_windows_host.ps1
+    encoding: "gzip+base64"
+    content: |
+      ${bootstrap_windows_host}
+# --- EOF Update remote files ------------------------------------------------
+# --- Run configuration commands ---------------------------------------------
+runcmd:
+  - echo "Call bootstrap script"
+  - powershell.exe "C:/Users/Administrator/bootstrap_windows_host.ps1"
+# --- EOF Run configuration commands -----------------------------------------
+# --- EOF --------------------------------------------------------------------
