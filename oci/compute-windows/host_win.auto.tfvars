@@ -21,6 +21,6 @@ host_win_image_id      = "WIN"                 # Provide a custom image id for t
 host_win_shape         = "VM.Standard.E3.Flex" # The shape of compute instance.
 host_win_ocpus         = 1                     # The OCPUS for the shape.
 host_win_memory_in_gbs = 10                    # The memory in gbs for the shape. 
-host_win_defined_tags  = { "Schedule.Weekend" = "0,0,0,0,0,0,0,0,0,0,*,*,*,*,*,*,*,*,*,*,*,0,0,0",
-                           "Schedule.WeekDay" = "0,0,0,0,0,0,*,*,1,1,1,1,1,1,1,1,1,1,1,*,*,0,0,0" }
+host_win_defined_tags = { "Schedule.Weekend" = "0,0,0,0,0,0,0,0,0,0,*,*,*,*,*,*,*,*,*,*,*,0,0,0",
+"Schedule.WeekDay" = "0,0,0,0,0,0,*,*,1,1,1,1,1,1,1,1,1,1,1,*,*,0,0,0" }
 # --- EOF ----------------------------------------------------------------------
